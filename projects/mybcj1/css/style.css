@@ -1,0 +1,679 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    /* width: 100vw; */
+    /* overflow-x: hidden; */
+}
+
+/* Start Header Section */
+header{
+    height: 100vh;
+    /* width: 100vw; */
+    
+}
+
+.img{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    /* object-position: 0 20px; */
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    z-index: -3;
+
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.promos{
+    height: 23px;
+    background-color: #222;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 10;
+    /* animation: promotext 7s linear infinite; */
+}
+
+
+.promotexts{
+    z-index: 5;
+
+    animation: promotext 9s linear infinite;
+
+}
+
+@keyframes promotext{
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}
+
+/* start navbar */
+.navbar{
+    height: 80px;
+    background: rgba(0,0,0,0.2);
+    text-decoration: none;
+    color: #fff;
+
+    margin-top: 23px;
+
+}
+
+.navbar.navwhite{
+    height: 70px;
+    background: #fff;
+    color: #000;
+
+    margin-top: 0px;
+}
+
+
+.brandimages{
+    filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.7));
+
+    transform: translateY(-8px);
+}
+
+.gems{
+    display: inline-block;
+    transform: translateY(-10px);
+}
+
+.brandtexts{
+    display: inline-block;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.3);
+
+    transform: translateY(5px);
+}
+
+.navbuttons{
+    cursor: pointer;
+    transform: translateY(-8px);
+}
+
+.lines{
+    background-color: #000;
+    width: 23px;
+    height: 3px;
+    margin: 5px;
+
+    transition: all 0.5s;
+
+}
+
+.lines1{
+    animation: bar1 0.5s;
+}
+
+.lines2{
+    opacity: 1;
+    animation: bar2 0.5s;
+}
+
+.lines3{
+    animation: bar3 0.5s;
+}
+
+@keyframes bar1{
+    0%{
+        transform: translate(-5px,8px) rotate(45deg);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: translate(0,0) rotate(0);
+    }
+}
+
+@keyframes bar2{
+    0%{
+        transform: translate(5px,8px) rotate(45deg);
+        
+    }
+    50%{
+        transform: rotate(45deg);
+        
+    }
+    100%{
+        transform: translate(0,0) rotate(0);
+    }
+}
+
+@keyframes bar3{
+    0%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: translate(-5px,-8px) rotate(-45deg);
+    }
+}
+
+
+.active .lines1{
+    animation: crossani1 1s forwards;
+}
+
+.active .lines2{
+    animation: crossani2 1s forwards;
+    opacity: 0;
+}
+
+.active .lines3{
+    animation: crossani3 1s forwards;
+}
+
+@keyframes crossani1{
+    0%{
+        transform: translate(0,0) rotate(0);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    100%{
+        transform: translate(-5px,8px) rotate(45deg);
+    }
+}
+
+@keyframes crossani2{
+    0%{
+        transform: translate(0,0) rotate(0);
+
+    }
+    50%{
+        transform: rotate(45deg);
+
+    }
+    100%{
+        transform: translate(5px,8px) rotate(45deg);
+    }
+}
+
+@keyframes crossani3{
+    0%{
+        transform: translate(0,0) rotate(0);
+
+    }
+    50%{
+        transform: rotate(45deg);
+
+    }
+    100%{
+        transform: translate(-5px,-8px) rotate(-45deg);
+
+    }
+}
+
+.menuitems{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    
+    /* border-bottom: 2px solid #fff; */
+    padding: 5px 0;
+
+    position: relative;
+    
+    transition: all 0.5s;
+}
+
+.menuitems:hover{
+    color: #fff;
+    font-weight: bold;
+}
+
+.menuitems::before{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+
+    position: absolute;
+    top: -30px;
+    left: 0;
+
+    opacity: 0;
+
+    transition: all 0.5s;
+}
+
+.menuitems::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+
+    opacity: 0;
+
+    transition: all 0.5s;
+
+}
+
+.menuitems:hover::before{
+    top: -3px;
+    opacity: 1;
+}
+
+.menuitems:hover::after{
+    bottom: -3px;
+    opacity: 1;
+}
+
+.navbuttons.active ~ .menudivs{
+    background-color: #fff;
+    padding: 20px 0;
+    margin: -12px 0;
+    line-height: 80px;
+}
+
+.navbar.navwhite .menuitems{
+    color: #000;
+}
+
+.navbar.navwhite .menuitems::before,
+.navbar.navwhite .menuitems::after{
+    background-color: #000;
+}
+
+.navbar.active .menuitems{
+    color: #000;
+}
+
+.navbar.active .menuitems::before,
+.navbar.active .menuitems::after{
+    background-color: #000;
+}
+
+/* end navbar */
+
+/* start banner */
+.banners{
+    width: 500px;
+    height: 220px;
+    /* background-color: red; */
+    font-family: 'Roboto Slab', serif;
+    font-size: 60px;
+    color: #fff;
+    text-shadow: 3px 3px 3px #000;
+
+    position: absolute;
+    top: 25%;
+    right: 0%;
+
+    overflow: scroll;
+    transition: all 0.5s;
+}
+
+.banners::-webkit-scrollbar {
+    display: none;
+}
+/* end banner */
+/* End Header Section */
+
+/* Start TV Commercial Section */
+/* start title */
+.commercials{
+    background-color: #fff;        
+    font-family: 'Roboto Slab', serif;
+
+    margin: auto;
+}
+
+/* .commercialrows{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    margin: auto;
+} */
+
+.titletexts{
+    line-height: 40px;
+
+}
+/* end title */
+
+.com-imgboxes{
+    width: 400px;
+    background-color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+
+    position: relative; 
+
+}
+
+.com-imgs{
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.5s;
+}
+
+.com-texts{
+    background-color: rgba(0,0,0,0.5);
+    font-weight: bold;
+    color: #fff;
+    padding: 5px 20px 5px 10px;
+
+    position: absolute;
+    bottom: -43px;
+    left: 0px;
+
+    transition: all 0.5s;
+}
+
+.com-imgboxes:hover .com-imgs{
+    transform: scale(1.2);
+    transform-origin: right bottom;
+}
+
+.com-imgboxes:hover .com-texts{
+    bottom: -7px;
+}
+/* End TV Commercial Section */
+
+/* Start Product Section */
+.products{
+    background-color: #000;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.gallerylists{
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gallerylists.activeitems{
+    background-color: gold;
+    /* color: #fff; */
+}
+
+.product-boxs{
+    width: 300px;
+    /* margin: auto; */
+    /* position: relative; */
+}
+
+.product-imgs{
+    width: 300px;
+    height: 300px;
+    background-color: #FAF7F2;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.prdimgs{
+    /* width: 100%; */
+    height: 250px;
+    object-fit: cover;
+    object-position: left bottom;
+
+    cursor: pointer;
+}
+
+.backs{
+    display: none;
+    transition: all 0.5s;
+}
+
+.fronts{
+    transition: all 0.5s;
+}
+
+.product-imgs:hover .fronts{
+    display: none;
+}
+
+.product-imgs:hover .backs{
+    display: block;
+}
+
+/* .detailbtns{
+    background-color: #000;
+    color: #fff;
+    
+} */
+/* End Product Section */
+
+/* Start Customer Section */
+.locations{
+    width: 150px;
+    display: inline-block;
+}
+/* End Customer Section */
+
+/* Start Contact Section */
+.contacts{
+    background-color: #000;
+}
+
+.faq{
+    width: 100%;
+    background-color: #fff;
+    color: #000;    
+    border-radius: 5px;
+    margin: 11px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.faq-title{
+    font-size: 16px;
+    padding: 20px;
+    padding-bottom: 10px;
+
+}
+
+.faq-text{
+    font-size: 14px;
+    text-align: justify;
+    padding: 0px 10px;
+
+    display: none;
+
+}
+
+.faq.fqactive .faq-text{
+    display: block;
+}
+
+.faq-toggle{
+    background-color: transparent;
+    border: 0;
+}
+
+.faq-toggle .fas{
+    font-size: 18px;
+    /* padding: 20px; */
+    color: #666;
+
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+.faq.fqactive .faq-toggle .fa-plus{
+    display: none;
+}
+
+.form-group{
+    position: relative;
+}
+
+.contactforms{
+    background-color: transparent;
+    color: #fff;
+    /* padding: 10px; */
+
+    -moz-appearance: textfield;
+}
+
+.contactforms::-webkit-outer-spin-button,
+.contactforms::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+.contactforms:active{
+    background-color: transparent;
+    color: #fff;
+
+    box-shadow: none;
+}
+
+.contactforms:focus{
+    background-color: transparent;
+    color: #fff;
+
+    box-shadow: none;
+
+}
+
+.labels{
+    opacity: 0;
+
+    position: absolute;
+    top: 11px;
+    left: 32px;    
+
+    z-index: 3;
+
+    transition: all 0.5s;
+}
+
+
+.contactforms:focus + .labels{
+    opacity: 1;
+
+    top: -12px;
+    left: 12px;
+
+    transition: all 0.5s;
+
+}
+
+.uploads .contactforms{
+    display: none;
+}
+
+.txtareas{
+    display: flex;
+    flex-direction: column;
+}
+
+/* End Contact Section */
+
+/* Start Footer Section */
+.subscribe-inputs:focus{
+    box-shadow: none;
+}
+
+.disappears{
+    opacity: 0;
+}
+
+.fab{
+    cursor: pointer;
+}
+
+.fab-text{
+    text-decoration: none;
+    display: inline-block;
+    visibility: hidden;
+    transform: scale(0);
+
+    transition: all 0.5s;
+}
+
+
+.fa-facebook:hover ~ .fb-text{
+    transform: scale(1);
+    visibility: visible;
+}
+
+.fa-twitter:hover ~ .tt-text{
+    transform: scale(1);
+    visibility: visible;
+}
+
+.fa-instagram:hover ~ .ig-text{
+    transform: scale(1);
+    visibility: visible;
+}
+
+.fa-youtube:hover ~ .yt-text{
+    transform: scale(1);
+    visibility: visible;
+}
+/* End Footer Section */
+
+/* Start Modal Area */
+/* Start Feedback Modal */
+.stars .fas{
+    cursor: pointer;
+}
+
+#feedbackmsg{
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    border-radius: 0;
+}
+
+#feedbackmsg:focus{
+    box-shadow: none;
+}
+
+.sts.checked{
+    color: yellow;
+}
+
+.feedbackresponses{
+    display: none;
+}
+
+.footerlinks{
+    text-decoration: none;
+    color: #000;
+
+}
+/* Start Feedback Modal */
+
+/* End Modal Area */

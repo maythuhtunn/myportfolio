@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
+
+:root{
+    --gr : #014137;
+    --pk : #E4CDB4;
+}
+
+body{
+    font-family: 'Noticia Text', serif;
+    background-color: var(--gr);
+
+    transition: all 0.5s;
+}
+
+/* Start Header */
+.navbar.navmenus{
+    background-image: linear-gradient(100deg,rgba(0,0,0,0.7),rgba(0,0,0,0.9));
+}
+
+header{
+    height: 100vh;
+
+}
+
+header.cap{
+    height: 100vh;
+    /* width: 100vw; */
+    background-image: linear-gradient(45deg,rgba(0,0,0,0.2),rgba(0,0,0,0.4)), url("../img/cappuccinobg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: all 0.5s;
+
+}
+
+header.esp{
+    height: 100vh;
+    /* width: 100vw; */
+    background-image: linear-gradient(45deg,rgba(0,0,0,0.2),rgba(0,0,0,0.4)), url("../img/espresso.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: all 0.5s;
+
+}
+
+header.moc{
+    height: 100vh;
+    /* width: 100vw; */
+    background-image: linear-gradient(45deg,rgba(0,0,0,0.2),rgba(0,0,0,0.4)), url("../img/mocha.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: all 0.5s;
+
+}
+
+
+
+/* start navbar */
+.navimgs{
+    filter: drop-shadow(3px 3px 3px #000);
+}
+
+.navimgs:hover{
+    filter: drop-shadow(0 0 5px var(--pk));
+}
+
+.brandtexts{
+    color: var(--pk);
+    letter-spacing: 2px;
+}
+
+.brandtexts:hover{
+    color: var(--gr);
+    text-shadow: 0px 0px 7px var(--pk);
+}
+
+.navbuttons{
+    cursor: pointer;
+}
+
+.lines{
+    width:26px;
+    height: 3px;
+    background-color: var(--pk);
+    margin: 5px;
+
+    transition: all 0.2s;
+
+}
+
+.menu-containers{
+    background-color: transparent;
+}
+
+.changes + .menu-containers{
+    background-color: rgba(0,0,0,0.9);
+}
+
+.changes .lines1{
+    width: 13px;
+    transform: translate(0,3px) rotateZ(45deg);
+}
+
+.changes .lines2{
+    transform: rotateZ(-45deg);
+}
+
+.changes .lines3{
+    width: 13px;
+    transform: translate(10px,-3px) rotateZ(45deg);
+}
+
+.menulinks{
+    color: var(--pk);
+    letter-spacing: 1px;
+    
+    transition: all 0.2s;
+}
+
+.menulinks .span{
+    position: relative;
+}
+
+.span::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    /* background-color: var(--pk); */
+    border-bottom: 5px solid var(--pk);
+
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+
+    transition: all 0.2s;
+}
+
+.menulinks:hover .span::after{
+    width: 100%;
+    left: 0;
+}
+
+.menulinks:hover{
+    color: var(--pk);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.menulinks:active, 
+.menulinks:visited,
+.menulinks:focus{
+    color: var(--pk);
+}
+/* end navbar */
+
+/* start banner */
+.banners{
+    color: var(--pk);
+    text-shadow: 0px 5px 5px var(--gr);
+    width: 90%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+}
+
+.banners ul li{
+    cursor: pointer;
+}
+
+.banners ul li:hover{
+    color: var(--gr);
+    text-shadow: -1px -5px 5px var(--pk);
+}
+
+
+/* end navbar */
+
+/* End Header */
+
+/* Start Menus Section */
+.menus{
+    background-color: var(--pk);
+    color: var(--gr);
+}
+
+.underlines{
+    max-width: 200px;
+    border: 1px dotted var(--gr);
+    margin: auto;
+}
+
+.item-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.item-boxs{
+    display: flex;
+    justify-content: center;
+}
+
+.items{
+    width: 280px;
+    height: 280px;
+    background-color: #fff;
+    border-radius: 5px;
+    
+    display: flex;
+    justify-content: center;
+    
+    position: relative;
+
+    overflow: hidden;
+}
+
+.imgspans{
+    width: 100%;
+    height: 100%;
+    background-color: var(--gr);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 5;
+
+    cursor: pointer;
+
+    transition: all 0.5s ease-in;
+}
+
+.cardshadows{
+    width: 220px;
+    filter: drop-shadow(3px 5px 5px #000);
+    object-fit: cover;
+    object-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.img-texts{
+    color: var(--gr);
+    font-size: 28px;
+    font-weight: bold;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.prices{
+    position: absolute;
+    bottom: 0;
+    left: 200px;
+}
+
+.imgspans:hover{
+    transform: translateY(-55px);
+}
+
+
+/* End Menus Section */
+
+/* Start Gift Card Section */
+.gift-cards{
+    /* height: 100vh; */
+    background-color: #f4f4f4;
+    color: var(--gr);
+}
+
+.submitbtns{
+    font-size: 24px;
+    background-color: var(--pk);
+    color: var(--gr);
+    box-shadow: 0 3px 5px var(--gr);
+    padding: 10px 20px;
+
+    transition: all 0.5s;
+}
+
+.submitbtns:hover{
+    background-color: var(--gr);
+    color: var(--pk);
+    
+}
+
+.submitbtns:active{
+    box-shadow: none;
+    transform: scale(0.9);
+}
+
+.submitbtns:focus{
+    box-shadow: none;
+}
+
+/* End Gift Card Section */
+
+/* Start Services Section */
+.services{
+    /* height: 400vh; */
+    background-color: var(--pk);
+}
+
+.services-imgs{
+    object-position: center;
+    object-fit: cover;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+.ser-texts{
+    max-width: 545px;
+    background-color: var(--gr);
+    box-shadow: 5px 5px 15px #000;
+    padding: 20px 40px;
+    border-radius: 5px;
+
+}
+
+.services-texts{
+    color: var(--pk);
+    text-align: justify;
+}
+/* End Services Section */
+
+/* Start Contact Section */
+.contacts{
+    background-color: #f0f0f0;
+}
+
+.form-control{
+    background-color: var(--pk);
+    
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.form-group{
+    position: relative;
+}
+
+label{
+    color: transparent;
+    font-size: 14px;
+
+    position: absolute;
+    top: 0;
+    left: 13px;
+
+    transition: all 0.5s;
+}
+
+input:focus + label{
+    color: var(--gr);
+    top: -20px;
+}
+
+textarea:focus + label{
+    color: var(--gr);
+    top: -20px;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-control:focus{
+    box-shadow: none;
+    outline: 0;
+    background-color: var(--gr);
+    color: var(--pk);
+}
+
+.form-select{
+    background-color: var(--pk);
+}
+
+.form-select:focus{
+    box-shadow: none;
+    outline: 0;
+    background-color: var(--gr);
+    color: var(--pk);
+}
+
+.btns{
+    color: var(--gr);
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    background-color: var(--pk);
+    box-shadow: 3px 5px 5px var(--gr);
+
+    transition: all 0.3s ease-in-out;
+}
+
+.btns:hover{
+    box-shadow: 3px 5px 10px #000;
+    outline: 0;
+    background-color: var(--gr);
+    color: var(--pk);
+}
+
+.btns:focus{
+    box-shadow: none;
+    outline: 0;
+    background-color: var(--gr);
+    color: var(--pk);
+}
+
+/* End Contact Section */
+
+/* Start Footer Section */
+.footermenus{
+    color: var(--pk);
+
+    transition: all 0.2s;
+}
+
+.footermenus:hover{
+    color: var(--pk);
+    font-weight: bolder;
+    transform: scale(1.2);
+}
+
+.fab{
+    cursor: pointer;
+
+    transition: all 0.2s;
+}
+
+.fab:hover{
+    color: var(--pk);
+
+    transform: rotate(2turn) scale(1.1);
+}
+/* End Footer Section */

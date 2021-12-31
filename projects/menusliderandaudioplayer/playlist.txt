@@ -1,0 +1,7 @@
+playlist sample1 - Memories by Maroon5
+playlist sample2 - One Call Away by Charlie Puth
+playlist sample3 - 10,000 Hours by Dan and Shay
+playlist sample4 - A Little Love by Fiona Fung
+playlist sample5 - Perfect by Ed Sheeran
+playlist sample6 - Marry You by Bruno Mars
+playlist sample7 - A Thousand Years by Christina Perri
